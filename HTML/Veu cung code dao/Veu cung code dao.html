@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .boob {
+      height: 210px;
+    }
+    #boob-right {
+      position: relative;
+      left: -1px;
+      top: -5px;
+      cursor: pointer;
+      transition: all 1s;
+    }
+    #status {
+      font-size: 20px;
+      color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="images/body up.png" alt="" width="500px">
+  </div>
+  <div>
+    <img src="images/boob left.png" id="boob-left" alt="" class="boob">
+    <img src="images/boob right.png" id="boob-right" alt="" class="boob">
+  </div>
+  <div>
+    <img src="images/body down.png" alt="" width="500px">
+  </div>
+  <span id="status">vếu nằm bất động</span>
+  <script>
+    function playSound() {
+      const audio = new Audio('sound/jump.mp3');
+      audio.play();
+    }
+
+    const boob_right = document.querySelector('#boob-right');
+    boob_right.onclick  = () => {
+      playSound();
+      boob_right.style.top = '-20px';
+      setTimeout(() => {
+        boob_right.style.top = '-5px';
+      },1000 )
+    }
+    boob_right.onmouseover = () => {
+      boob_right.style.width = 200px;
+    }
+  </script>
+</body>
+</html>
