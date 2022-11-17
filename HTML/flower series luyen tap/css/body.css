@@ -1,0 +1,19 @@
+body {
+  background-color: #979797;
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+}
+.header {
+  text-align: center;
+  padding: 47px;
+}
+section {
+  border: 1px solid yellow;
+  background-color: #FFFFFF;
+  width: 640px;
+}
+.title {
+  text-align: center;
+  padding: 20px;
+}
