@@ -1,1 +1,0 @@
-boob_right.onmouseover

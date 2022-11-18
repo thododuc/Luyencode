@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: #979797;
   margin: 0;
@@ -12,8 +16,52 @@ section {
   border: 1px solid yellow;
   background-color: #FFFFFF;
   width: 640px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  color: #666;
+  font-family: 'Jacques Francois', serif;
 }
 .title {
   text-align: center;
   padding: 20px;
+}
+h2 {
+  font-weight: normal;
+  margin: 0;
+}
+.gallery {
+  border: 1px solid blue;
+  width: 400px;
+  float: left;
+}
+.description {
+  border: 1px solid green;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  float: right;
+  font-family:"Quattrocento Sans", sans-serif
+}
+#buyNow {
+  float: right;
+  background-color: #ED8E6C;
+  margin: 15px 10px 10px 0;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+body, button {
+  font-family: 'Jacques Francois', serif;}
+#buyNow:hover {
+  background-color: #ed612f;
+}
+
+/* hinh anh*/
+#photo {
+  height: 300px;
+  position: relative;
+}
+a.active {
+  opacity: 0.3;
 }
