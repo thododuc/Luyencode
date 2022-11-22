@@ -1,0 +1,60 @@
+.form-control {
+  position: relative;
+  width: 280px;
+  height: 50px;
+}
+.form-control input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  outline: none;
+  height: 100%;
+  padding: 0 10px;
+  transition: 0.2s;     /*CO PHAI NO KHONG*/
+  border-radius: 3px;
+}
+.form-control label {
+
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  width: auto;
+  height: 100%;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: gray;
+  pointer-events: none;
+  left: 10px;
+}
+
+.form-control input:valid + label {
+  top: -0.45rem;
+  left: 10px;
+  font-size: 0.9rem;
+  z-index: 100;
+  width: auto;
+  height: 0.9rem;
+  padding: 0 2px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+input:not(:focus) {
+  color: rgba(0, 0, 0, 0.5);
+}
+.form-control input:focus + label {
+  top: -0.45rem;
+  left: 10px;
+  font-size: 0.9rem;
+  z-index: 100;
+  width: auto;
+  height: 0.9rem;
+  padding: 0 2px;
+  color: #3484f0;
+  background-color: white;
+}
+.form-control input:focus {
+  border: 2px solid #3484f0;
+  transition: 0.1s;
+}
