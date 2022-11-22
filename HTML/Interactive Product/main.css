@@ -120,7 +120,50 @@ button.size.selected::after {
 	bottom: 0;
 }
 
+
+.colours .btn_wrap .black.selected {
+	background-color: #212121;
+	color: #FFF;
+}
+
+.colours .btn_wrap .blue.selected {
+	background-color: #2484E4;
+	color: #FFF;
+}
+
+.colours .btn_wrap .red.selected {
+	background-color: #AF1E2D;
+	color: #FFF;
+}
+
+.colours .btn_wrap .yellow.selected {
+	background-color: #FFCE00;
+	color: #212121;
+}
+
+.colours .btn_wrap .coral.selected {
+	background-color: #FF6C37;
+	color: #FFF;
+}
+
+.colours .btn_wrap .white.selected {
+	background-color: #EEE;
+	color: #212121;
+}
+
+.submit {
+	margin-top: 50px;
+	background-image: linear-gradient(to right, transparent 50%, #ed008d 50%, #8d00ed 100%);
+	transition: 0.8s;
+	background-size: 200%;
+}
+
+.submit:hover {
+	color: white;
+	background-position: 100%;
+}
+
 @keyframes fadein {
   0% {opacity: 0;}
   100% {opacity: 1;}
-}
+} 
