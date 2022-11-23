@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filter Search</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="search-wrapper">
-    <label for="search">Search Users</label>
-    <input type="search" id="search"/>
-  </div>
-    <div class="user-cards">
-      <div class="card">
-        <div class="header">My name</div>
-        <div class="body">email@gmail.com</div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Filter And Search</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="search-container">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search product name here.."
+        />
+        <button id="search">Search</button>
       </div>
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('Topwear')">
+          Topwear
+        </button>
+        <button class="button-value" onclick="filterProduct('Bottomwear')">
+          Bottomwear
+        </button>
+        <button class="button-value" onclick="filterProduct('Jacket')">
+          Jacket
+        </button>
+        <button class="button-value" onclick="filterProduct('Watch')">
+          Watch
+        </button>
+      </div>
+      <div id="products"></div>
     </div>
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>

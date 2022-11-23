@@ -1,0 +1,6 @@
+1. Tao vien cho button dang duoc chon
+	a. Ngoai button thi se tao 2 peudo element la ::before va ::after. Cả 2 đều có kích thước
+lớn hơn button.
+	b. ::before co z-line -2 và nằm dưới cùng. ::after có z-line -1 nằm ở giữa.
+	c. Trong trường hợp button được chọn (selected) thì ::after có kích thước nhỏ lại
+do đó làm lộ ra ::before
