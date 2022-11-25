@@ -3,7 +3,7 @@
   width: 280px;
   height: 50px;
 }
-.form-control input {
+input {
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
   outline: none;
@@ -12,7 +12,7 @@
   transition: 0.2s;     /*CO PHAI NO KHONG*/
   border-radius: 3px;
 }
-.form-control label {
+label {
 
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@
   left: 10px;
 }
 
-.form-control input:valid + label {
+input:valid + label {
   top: -0.45rem;
   left: 10px;
   font-size: 0.9rem;
@@ -43,7 +43,7 @@
 input:not(:focus) {
   color: rgba(0, 0, 0, 0.5);
 }
-.form-control input:focus + label {
+input:focus + label {
   top: -0.45rem;
   left: 10px;
   font-size: 0.9rem;
@@ -54,7 +54,7 @@ input:not(:focus) {
   color: #3484f0;
   background-color: white;
 }
-.form-control input:focus {
+input:focus {
   border: 2px solid #3484f0;
   transition: 0.1s;
 }

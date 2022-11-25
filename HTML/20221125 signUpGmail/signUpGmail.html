@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/gmail favicon.svg">
+  <link rel="stylesheet" href="signUpGmail.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">  
+
+  <title>Create your Google Account</title>
+</head>
+<body>
+  <div class="all">
+    <div class="section">
+      <div class="core">
+        <div class="main">
+          <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="">
+          </div>
+          <div class="title">Create your Google Account</div>
+          <div class="sub-title">to continue to Gmail</div>
+          <div class="big-container" id="name">
+            <div class="fname input-container small-container">
+              <input type="text" id="fname" required/>
+              <label for="fname">First name</label>
+              <div class="msg"></div>
+            </div>
+            <div class="space"></div>
+            <div class="lname input-container small-container">
+              <input type="text" id="lname" required/>
+              <label for="lname">Last name</label>
+              <div class="msg"></div>
+            </div>
+          </div>
+          <div class="username big-container">
+            <div class="input-container" id="usernameContainer">
+              <input type="text" name="" id="username" required/>
+              <label for="username">Username</label>
+              <p>@gmail.com</p>
+            </div>
+          </div>
+          <div class="msg">You can use letters, numbers & periods</div>
+          <div class="big-container" id="passwordContainer">
+            <div class="password input-container small-container">
+              <input type="password" required/>
+              <label for="password">Password</label>
+            </div>
+            <div class="space"></div>
+            <div class="confirm-password input-container small-container">
+              <input type="password" required/>
+              <label for="confirm-password">Confirm</label>
+            </div>
+          </div>
+          <div class="msg">Use 8 or more characters with a mix of letters, numbers & symbols</div>
+          <div id="showPassword">
+            <div id="checkBoxContainer">
+              <input type="checkbox" id="checkbox"/>
+            </div>
+            <p>Show password</p>
+          </div>
+          <div id="nextContainer">
+            <div id="signIn">
+              <button>Sign in instead</button>
+            </div>
+            <div class="confirm">
+              <button>Next</button>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <img src="img/signUpGmail.svg" alt="">
+          <p>One account. All of Google</p>
+          <p>working for you.</p>
+        </div>
+      </div>
+
+    </div>
+    <div id="panel">
+      <select name="language" id="language">
+        <option value="english">English (United States)</option>
+        <option value="indonesia">Indonesia</option>
+        <option value="vietnamese">Vietnamese</option>
+      </select>
+      <div id="rightPanel">
+        <button>Terms</button>
+        <button>Privacy</button>
+        <button>Help</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

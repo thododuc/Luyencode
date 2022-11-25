@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Da 2', sans-serif;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-image: url("img/O9FG4R0.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main {
+  margin: 1rem;
+}
+
+
+.card {  
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(74, 74, 74, 0.674);
+  padding: 2em;
+
+  color: #152e4c
+}
+
+.space {
+  height: 1.3em;
+  font-size: 2.3em;
+  font-weight: bold;
+}
+
+.hour {
+  font-size: 1.5em;
+  height: 1.2em;
+}
+.time {
+  position: relative;
+  font-size: 1.15em;
+}
+.main-info {
+  border: 1px solid red;
+}
+.temp {
+  font-size: 5em;
+  text-align: center;
+  justify-content: center;
+}
+
+.description {
+  font-size: 1.7em;
+  margin-bottom: 1rem;
+}
+
+.icon{
+  height: 5rem;
+}
+
+.sub-info{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sub-info .sub{
+  margin: 0 6px;
+  width: 44%;
+  min-width: 200px;
+  border-bottom: 1px solid grey;
+  padding: 0 5px;
+  font-size: 1.2em;
+}
+.parameter {
+  float: left;
+}
+
+.value {
+  float: right;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.button .button-container {
+
+  margin: 0 10px;
+}
+
+button.city {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+  border: none;
+  background-color: rgba(74, 74, 74, 0.674);
+  
+  border-radius: 8px;
+  color: white;
+
+  font-weight: 600;
+  font-size: 1.2em;
+  transition: 0.5s;
+}
+
+button.city:hover {
+  font-size: 1.4em;
+}
+button.city:focus {
+  font-size: 1.4em;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  font-weight: bold;
+}
+button.city.selected {
+  color: red;
+}
+

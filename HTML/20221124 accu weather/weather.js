@@ -1,5 +1,5 @@
 let weather = {
-  apiKey: "745c2e92304a7f2fb5e3de92b74c6fd2",   //https://api.openweathermap.org/data/2.5/weather?q=hanoi&units=metric&appid=745c2e92304a7f2fb5e3de92b74c6fd2
+  apiKey: "745c2e92304a7f2fb5e3de92b74c6fd2",   
   fetchWeather: function (city) {
     fetch (
       "https://api.openweathermap.org/data/2.5/weather?q=" 
@@ -7,7 +7,13 @@ let weather = {
       + "&units=metric&appid="
       + this.apiKey
     )
-    .then((Response) => Response.json())
+    .then((response) => {
+      if (!response.ok) {
+        alert("No weather found.");
+        throw new Error("No weather found.");
+      }
+      return response.json();
+    })
     .then((data) => this.displayWeather(data));
   },
   displayWeather: function (data) {
