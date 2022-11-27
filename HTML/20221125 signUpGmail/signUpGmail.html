@@ -15,7 +15,6 @@
   <title>Create your Google Account</title>
 </head>
 <body>
-  <h1>THO</h1>
   <div class="all">
     <div class="section">
       <div class="core">
@@ -32,12 +31,12 @@
               <label for="fname">First name</label>
             </div>
             <div class="space"></div>
-            <div class="input-container small-container" data-value="1">
+            <div class="input-container small-container" id="lnameContainer" data-value="1">
               <input type="text" id="lname" class="inputField" required/>
               <label for="lname">Last name</label>
             </div> 
           </div>
-          <div class="msg" data-value="1"></div>
+          <div class="msg" data-value="1" style="color: #D93025;"></div>
           <div class="username big-container">
             <div class="input-container" id="usernameContainer" data-value="1">
               <input type="text" name="" id="username" class="inputField" autocomplete="username" required/>
@@ -48,19 +47,19 @@
           <div class="msg">You can use letters, numbers & periods</div>
           <div class="big-container" id="passwordContainer">
             <div class="input-container small-container" data-value="1">
-              <input type="password" id="password" class="inputField" autocomplete="new-password" required/>
+              <input type="password" id="password" class="inputField inputPassword" autocomplete="new-password" required/>
               <label for="password" >Password</label>
             </div>
             <div class="space"></div>
-            <div class="input-container small-container" data-value="1">
-              <input type="password" id="confirmPassword" class="inputField " autocomplete="new-password" required/>
+            <div class="input-container small-container" id="confirmPasswordContainer" data-value="1">
+              <input type="password" id="confirmPassword" class="inputField inputPassword" autocomplete="new-password" required/>
               <label for="confirm-password">Confirm</label>
             </div>
           </div>
           <div class="msg">Use 8 or more characters with a mix of letters, numbers & symbols</div>
           <div id="showPassword">
             <div id="checkBoxContainer">
-              <input type="checkbox" id="checkbox"/>
+              <input type="checkbox" id="checkbox" onclick="togglePassword()"/>
               <div id="checkboxBG"></div>
             </div>
             <p>Show password</p>
@@ -95,6 +94,6 @@
       </div>
     </div>
   </div>
-  <script src="signUpGmail d2.js"></script>
+  <script src="signUpGmail.js"></script>
 </body>
 </html>

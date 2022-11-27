@@ -56,12 +56,22 @@ a {
 }
 
 .big-container {
+  position: relative;
   padding-top: 24px;
 }
 
-.space {
-  width: 5px;
+#lnameContainer {
+  position: absolute;
+  right: 0px;
 }
+
+#confirmPasswordContainer{
+  position: absolute;
+  right: 0px;
+}
+/*.space {
+  width: 5px;
+}*/
 
 .input-container {
   position: relative;
@@ -113,12 +123,16 @@ a {
   border: 2px solid #2B7CE7;
 }
 
-[data-value="0"] input:focus, [data-value="0"] input:valid{
+[data-value="0"] input:valid {
+  border: 1px solid #D93025
+}
+
+[data-value="0"] input:focus{
   border: 2px solid #D93025;
 }
 
 [data-value="0"] input{
-  border: 2px solid #D93025;
+  border: 1px solid #D93025;
 }
 
 .msg[data-value="0"]  {
@@ -301,6 +315,11 @@ a {
 #rightPanel {
   height: 100%;
 }
+
+#language {
+  background-color: transparent;
+}
+
 #rightPanel button {
   float: right;
   height: 100%;
