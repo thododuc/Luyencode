@@ -31,6 +31,7 @@ let blankCheck = (srPst, srMsg, message) => {
 
 
 
+
 function checkEmptyName() {
   blankCheck(0, 0, "Enter first name"); 
   blankCheck(1, 0, "Enter last name");
@@ -39,9 +40,6 @@ function checkEmptyName() {
   }
 };
 
-function checkUsername() {
-  blankCheck(2, 1, "Chose a Gmail address");
-};
 
 
 
@@ -66,6 +64,5 @@ function clearMsg() {
 function checkAll() {
   clearMsg(); 
   checkEmptyName();
-  checkUsername();
   checkColorMsg(); console.log(msg[0].dataset.value);
 }
