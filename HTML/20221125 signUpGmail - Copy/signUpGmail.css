@@ -315,6 +315,11 @@ a {
 #rightPanel {
   height: 100%;
 }
+
+#language {
+  background-color: transparent;
+}
+
 #rightPanel button {
   float: right;
   height: 100%;

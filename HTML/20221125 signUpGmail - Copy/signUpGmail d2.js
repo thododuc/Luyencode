@@ -1,21 +1,20 @@
 let id = (id) => document.getElementById(id);
-let classes = (classes) => document.getElementsByClassName(classes);
-let tag = (tag) => document.getElementsByTagName(tag);
+  classes = (classes) => document.getElementsByClassName(classes);
+  tag = (tag) => document.getElementsByTagName(tag);
 
+let msg = classes("msg"),
+  inputField = classes("inputField"),
+  inputContainer = classes("input-container");
 
-let
-  form1 = id("signUpForm"),
-  next = id("next");
-let msg = classes("msg");
-let inputField = classes("inputField");
-let inputContainer = classes("input-container");
+const reName = /^[a-z,.'-]+$/i, //Chấp nhận chữ cái và các ký tự , . ' -
+reUsername = /^[a-z]+[a-z0-9.]{4,28}[a-z0-9]$/i, // Chấp nhận chữ, số và ký tự . Ký tự . không được nằm ở cuối
+rePassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#\$%\^&\*])(?=.{8,})/; //Chép của thày, làm không nổi
 
 let blankCheck = (noInput) => inputField[noInput].value.trim() ===""? true : false;
-let checkNameCharacter = (noInput) => {
-  const re = /^[a-z,.'-]+$/i;
+let checkCharacter = (noInput,re) => {
   return !re.test(inputField[noInput].value);
-}
-
+};
+let checkLength = (noInput, min, max) => inputField[noInput].value.length < min || inputField[noInput].value.length > max ? true : false;
 
 // CHECK NAME
 
@@ -31,28 +30,25 @@ let checkNameBlank = () => {
   if(blankCheck(0) && blankCheck(1)) {
     msg[0].innerText = "Enter first name and last name";
   }
-}
+};
 
 let checkFullNameCharacter = () => {
-  if (checkNameCharacter(0)) {
+  if (checkCharacter(0, reName)) {
     inputContainer[0].dataset.value  *= 0;
     msg[0].innerText = "Are you sure you entered your name correctly";
   } 
-  if (checkNameCharacter(1)) {
+  if (checkCharacter(1, reName)) {
     inputContainer[1].dataset.value  *= 0;
     msg[0].innerText = "Are you sure you entered your name correctly";
   } 
-}
+};
 
 let checkFullName = () => {
   checkNameBlank();
   if (msg[0].innerText === "") {
     checkFullNameCharacter();
-  };
+  }
 };
-
-
-
 
 
 // CHECK USERNAME
@@ -62,13 +58,35 @@ let checkUsernameBlank = () => {
     inputContainer[2].dataset.value  *= 0;
     msg[1].innerText = "Chose a Gmail address";
     msg[1].style.color = "#D93025";
-  }
-}
+  };
+};
+
+let checkUsernameLength = () => {
+  if (checkLength(2, 6, 30)) {
+    inputContainer[2].dataset.value  *= 0;
+    msg[1].innerText = "Sorry, your username must be between 6 and 30 characters long.";
+    msg[1].style.color = "#D93025";
+  };
+};
+
+let isUsernameCharacterError = () => {
+  if(checkCharacter(2, reUsername)) {
+    inputContainer[2].dataset.value  *= 0;
+    msg[1].innerText = "Sorry, only letters (a-z), numbers (0-9), and periods (.) are allowed.";
+    msg[1].style.color = "#D93025";
+  };
+};
 
 
-
-
-
+let checkUsername = () => {
+  checkUsernameBlank();
+  if (msg[1].innerText === "") {
+    checkUsernameLength();
+  };
+  if(msg[1].innerText === "") {
+    isUsernameCharacterError();
+  };
+};
 
 //CHECK PASSWORD
 
@@ -77,14 +95,45 @@ let checkPasswordBlank = () => {
     inputContainer[3].dataset.value  *= 0;
     msg[2].innerText = "Enter a password";
     msg[2].style.color = "#D93025";
+  };
+};
+
+let checkPasswordLength = () => {
+  if(checkLength(3, 8, Infinity)) {
+    inputContainer[3].dataset.value  *= 0;
+    msg[2].innerText = "Use 8 characters or more for your password";
+    msg[2].style.color = "#D93025";
+  }
+};
+
+let isPasswordCharacterError = () => {
+  if(checkCharacter(3, rePassword)) {
+    inputContainer[3].dataset.value  *= 0;
+    msg[2].innerText = "Please choose a stronger password. Try a mix of letters, numbers, and symbols.";
+    msg[2].style.color = "#D93025";
+  };
+};
+
+let isMatchPassword = () => {
+  if(inputField[3].value !== inputField[4].value) {
+    msg[2].innerText = "Those passwords didn't match. Try again.";
+    msg[2].style.color = "#D93025";
   }
 }
 
 
-/*function checkColorMsg() {
-  msg[0].dataset.value = inputContainer[0].dataset.value * inputContainer[1].dataset.value; 
-  msg[1].dataset.value = inputContainer[2].dataset.value;
-}*/
+let checkPassword = () => {
+  checkPasswordBlank();
+  if (msg[2].innerText === "") {
+    checkPasswordLength();
+  };
+  if (msg[2].innerText === "") {
+    isPasswordCharacterError();
+  };
+  if (msg[2].innerText === "") {
+    isMatchPassword();
+  };
+}
 
 function clearMsg() {
   for(let i = 0; i < 5; i++) {
@@ -93,13 +142,12 @@ function clearMsg() {
       continue;
     }
     msg[i].innerText = '';
-    // msg[i].style.color = "#2E2124";
   };
 }
 
 function checkAll() {
   clearMsg();
   checkFullName();
-  checkUsernameBlank();
-  checkPasswordBlank();
+  checkUsername();
+  checkPassword();
 }
