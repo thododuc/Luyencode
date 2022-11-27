@@ -7,11 +7,11 @@ let msg = classes("msg"),
   inputContainer = classes("input-container");
 
 const reName = /^[a-z,.'-]+$/i, //Chấp nhận chữ cái và các ký tự , . ' -
-reUsername = /^[a-z]+[a-z0-9.]{4,28}[a-z0-9]$/i, // Chấp nhận chữ, số và ký tự . Ký tự . không được nằm ở cuối
+reUsername = /^[a-z]+[a-z0-9.]{4,28}[a-z0-9]$/i, // Chấp nhận chữ, số và ký tự . Ký tự . không được nằm ở cuối. Ký tự . và số không được nằm ở đầu
 rePassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#\$%\^&\*])(?=.{8,})/; //Chép của thày, làm không nổi
 
-let blankCheck = (noInput) => inputField[noInput].value.trim() ===""? true : false;
-let checkCharacter = (noInput,re) => {
+let blankCheck = (noInput) => inputField[noInput].value.trim() ===""? true : false;  //không nên để tham số như thế này vì không trực quan, 
+let checkCharacter = (noInput,re) => {                                                //khó xem lại code. Lần sau, viết tham số theo tên từng ô input để code dễ hiểu hơn.
   return !re.test(inputField[noInput].value);
 };
 let checkLength = (noInput, min, max) => inputField[noInput].value.length < min || inputField[noInput].value.length > max ? true : false;
