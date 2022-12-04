@@ -1,9 +1,33 @@
-* {
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
+/* top bar */
+.top-bar{
+  padding: 1rem 0;
+  background-color: deeppink;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+/* social list */
+.top-bar_social-list{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.top-bar_social-list>li{
+  margin-right: 1rem;
+}
+.top-bar_social-list>li>a{
+  color: white;
+
+}
+
+/* link */
+
+.top-bar_links>a {
+  color: white;
+  text-decoration: none;
+}
+.top-bar_links>span {
+  color: white;
 }
