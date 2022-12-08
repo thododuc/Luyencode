@@ -8,21 +8,18 @@
   <title>AngularJS Scope</title>
 </head>
 <body ng-app="myapp">
-  <h1>AngularJS Scope</h1>
-  <p>Rootscope color: {{color}}</p>
+  <p>Root Scope color: {{color}}</p>
   <br>
-  <div ng-controller="myctrl"> 
-    <p >Scope color: {{color}}</p>
-  </div>
+  <p ng-controller="myCtrl">Scope color: {{color}}</p>
 
   <script>
     var app = angular.module('myapp', []);
     app.run(function($rootScope) {
-      $rootScope.color = 'blue';
-    })
-    app.controller('myctrl', function($scope) {
-      $scope.color = 'red';
+      $rootScope.color ='blue';
     });
+    app.controller('myCtrl', function($scope) {
+      $scope.color = 'red';
+    })
   </script>
 </body>
 
