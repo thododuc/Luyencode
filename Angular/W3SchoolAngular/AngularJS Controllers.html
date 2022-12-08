@@ -9,5 +9,13 @@
 </head>
 <body>
   <h1>AngularJS Controllers</h1>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <ul>
+      <li ng-repeat="x in names">
+        {{x.name + ' ' + x.country}}
+      </li>
+    </ul>
+  </div>
+  <script src="namesController.js"></script>
 </body>
 </html>
