@@ -11,7 +11,7 @@
 /* social list */
 .top-bar_social-list{
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   height: 100%;
 

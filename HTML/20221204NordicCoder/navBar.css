@@ -44,3 +44,7 @@
 .top-bar_search > button > i {
   color: white;
 }
+
+.top-bar_search > button:hover {
+  background-color: #ff3d3d;
+}
