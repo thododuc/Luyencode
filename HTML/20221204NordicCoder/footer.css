@@ -1,0 +1,78 @@
+
+.app-footer > .container {
+  position: relative;
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-footer > .container::before {
+  content: "";
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(212, 212, 212, 0.63);
+}
+
+.app-footer .row {
+  position: relative;
+  width: 100%;
+  margin: 30px 50px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-footer_logo-wrapper > img {
+  width: 150px;
+}
+
+.app-footer_social-list {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0;
+  margin: 20px auto 5px;
+  list-style-type: none;
+}
+
+.app-footer_social-list > li {
+  margin-right: 15px;
+}
+
+.app-footer_social-list > li > a > i {
+  color: black;
+}
+
+.app-footer_social-list > li > a > i:hover {
+  color: #DE3535;
+}
+
+.app-footer_menu{
+  display: flex;
+  justify-content: end;
+  flex-flow: row nowrap;
+  list-style-type: none;
+}
+.app-footer_menu > li {
+  margin-left: 15px;
+  font-size: 0.9em;
+}
+
+.app-footer_menu > li > a {
+  color: black;
+  font-weight: bold;
+}
+
+.app-footer_menu > li > a:hover {
+  color: #DE3535;
+}
+
+.copy-right {
+  text-align: end;
+}

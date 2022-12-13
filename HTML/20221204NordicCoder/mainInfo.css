@@ -1,0 +1,75 @@
+
+/* HERO */
+
+.hero {
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1562587828-de93c5454a17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
+  background-size: cover;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin: 0;
+  padding: 4px 15px;
+  background-color: #DE3535;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+/* Main content */
+
+.about {
+  margin-top: 50px;
+}
+
+.about_title {
+  margin-bottom: 50px ;
+}
+
+.about_content > button {
+  padding: 10px 18px;
+  background-color: #DE3535;
+  border: none;
+  color: white;
+}
+
+.about_content > button:hover {
+  background-color: #ff3d3d;
+}
+
+.about img {
+  width: 100%;
+}
+
+.fact {
+  margin-top: 30px;
+}
+
+.fact .container {
+  padding: 60px auto;
+}
+
+.fact .row {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 40px;
+  background-color: rgb(219, 219, 219);
+}
+
+.col-3 .fact-item {
+  text-align: center;
+}
+.col-3 .fact-item > img {
+  width: 200px;
+}
+.fact-item_big-number {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.col-3 > .fact-item {}

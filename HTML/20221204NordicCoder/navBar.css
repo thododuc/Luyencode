@@ -1,0 +1,46 @@
+.nav-bar {
+  
+}
+
+.nav-bar .row {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar_logo img{
+  width: 150px;
+}
+
+.nav-bar_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+
+.nav-bar_menu > li {
+  margin-right: 16px;
+  font-size: 1.1em;
+  white-space: nowrap;
+}
+
+.nav-bar_menu > li > a {
+  color: black;
+}
+
+.nav-bar_menu > li > a:hover {
+  color: #DE3535;
+}
+
+.top-bar_search > button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  background-color: #DE3535;
+}
+.top-bar_search > button > i {
+  color: white;
+}

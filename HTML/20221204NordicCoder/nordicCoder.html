@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+autoo<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,60 +9,71 @@
   <script src="https://kit.fontawesome.com/1fb8bb996b.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="nordicCoder-header.css">
-  <link rel="stylesheet" href="nordicCoder-main.css">
+  <link rel="stylesheet" href="topBar.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="navBar.css">
+  <link rel="stylesheet" href="mainInfo.css">
+  <link rel="stylesheet" href="footer.css">
   <title>Nordic Coder</title>
 </head>
 <body>
   <header>
     <section class="top-bar">
       <div class="container">
-        <div class="row justify-content-between">
+        <div class="row">
           <div class="col-auto">
             <ul class="top-bar_social-list">
-              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa-solid fa-basketball"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa-solid fa-basketball"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-behance"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
             </ul>
           </div>
           <div class="col-auto">
-            <div class="top-bar_links">
-              <a href="">Register</a>
-              <span>/</span>
-              <a href="">Login</a>
+            <div class="top-bar_signIn">
+              <a href="">Register </a>
+              <span> / </span>
+              <a href=""> Login</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <nav class="top-nav">
+
+    <section class="nav-bar">
       <div class="container">
         <div class="row">
-          <div class="col">
-            <img src="" alt="" class="top-nav_menu">
+          <div class="col-auto">
+            <div class="nav-bar_logo">
+              <img src="img/nordicCoderLogo.png" alt="">
+            </div>
           </div>
-          <div class="col">
-            <ul class="top-nav_menu">
-              <li><a href=""></a></li>
+          <div class="col-auto">
+            <ul class="nav-bar_menu">
+              <li><a href="">Home</a></li>
+              <li><a href="">Recipies</a></li>
+              <li><a href="">Recipe Details</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
             </ul>
           </div>
-          <div class="col">
-            <div class="top-nav_search"><i></i></div>
+  
+          <div class="col-auto">
+            <div class="top-bar_search">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
+    </section>
   </header>
 
   <main>
     <section class="hero">
-      <!-- background-image -->
-      <div class="container-fluid">
-        <h1 class="hero_title"></h1>
+      <div class="container_fluid">
+        <h1 class="hero_title">About us</h1>
       </div>
     </section>
 
@@ -71,56 +82,54 @@
         <div class="row">
           <div class="col">
             <div class="about_content">
-              <h1 class="about_title"></h1>
-              <p class="about_description"></p>
+              <h1 class="about_title"> About our great team</h1>
+              <p class="about_desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, alias. Tempore minus quae voluptatum accusantium vero quisquam, molestias consequatur non. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus similique, laborum accusamus quod asperiores provident facilis excepturi maiores nam magni eius nostrum animi ea commodi corrupti exercitationem quae nemo, voluptas, qui odit labore. Quis facilis sit minima maiores, nostrum nesciunt.</p>
+              <button>Read more</button>
             </div>
+
           </div>
           <div class="col">
-            <img src="" alt="">
+            <img src="https://images.unsplash.com/photo-1664574652984-5b5f769bef07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="facts">
+    <section class="fact">
       <div class="container">
         <div class="row">
           <div class="col-3">
             <div class="fact-item">
-              <img src="" alt="" class="fact-item_image">
-                <p class="fact-item_big-number">
-                  <p class="fact-item_name"></p>
-                </p>
-              </img>
+              <img src="img/bread.jpg" alt="" class="fact-item_img">
+              <p class="fact-item_big-number">1287</p>
+              <p class="fact-item_name">Amazing recipies</p>
             </div>
           </div>
           <div class="col-3">
             <div class="fact-item">
-              <img src="" alt="" class="fact-item_image">
-                <p class="fact-item_big-number">
-                  <p class="fact-item_name"></p>
-                </p>
-              </img>
+              <img src="img/bread.jpg" alt="" class="fact-item_img">
+              <p class="fact-item_big-number">25</p>
+              <p class="fact-item_name">Wine pairings</p>
             </div>
           </div>
-          <div class="col-3">
-            <div class="fact-item">
-              <img src="" alt="" class="fact-item_image">
-                <p class="fact-item_big-number">
-                  <p class="fact-item_name"></p>
-                </p>
-              </img>
+
+            <div class="col-3">
+              <div class="fact-item">
+                <img src="img/bread.jpg" alt="" class="fact-item_img">
+                <p class="fact-item_big-number">471</p>
+                <p class="fact-item_name">Meat receipies</p>
+              </div>
             </div>
-          </div>
-          <div class="col-3">
-            <div class="fact-item">
-              <img src="" alt="" class="fact-item_image">
-                <p class="fact-item_big-number">
-                  <p class="fact-item_name"></p>
-                </p>
-              </img>
+
+            <div class="col-3">
+              <div class="fact-item">
+                <img src="img/bread.jpg" alt="" class="fact-item_img">
+                <p class="fact-item_big-number">326</p>
+                <p class="fact-item_name">Desert receipies</p>
+              </div>
             </div>
-          </div>
+
+          
         </div>
       </div>
     </section>
@@ -130,32 +139,33 @@
     <section class="app-footer">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-auto">
             <div class="app-footer_logo-wrapper">
-              <img src="" alt="" class="app-footer_logo">
+              <img src="img/nordicCoderLogo.png" alt="">
             </div>
             <ul class="app-footer_social-list">
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
+              <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa-solid fa-basketball"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-behance"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col-auto">
             <ul class="app-footer_menu">
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
+              <li><a href="">Home</a></li>
+              <li><a href="">Recipies</a></li>
+              <li><a href="">Recipe Details</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
             </ul>
-            <P>(COPYRIGHT)</P>
+            <p class="copy-right">Copyright by Nordic Coder</p>
           </div>
         </div>
       </div>
     </section>
   </footer>
+  <footer></footer>
 </body>
 </html>
