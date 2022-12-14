@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="0000.css">
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+ <script>
+var myApp = angular.module("myApp", []);
+ myApp.controller("myController", function($scope) {
+$scope.getClassElm = function() {
+	 var element = angular.element(document.querySelector(".myPara"));
+          element.css('color', 'blue');
+	 
+};
+});
+</script>
 </head>
-<body>
-  <div class="hero">
-    <h1>Cute kittehs everywhere!</h1>
-  </div>
-</body>
+<body>  
+<div ng-app="myApp">  
+<div ng-controller="myController">  
+<h3>AngularJs Is Cool!</h3>
+<p class="myPara">
+This is test paragraph....
+</p>
+<input type="button" value="Change Paragraph Color " ng-click="getClassElm()"> 
+</div> 
+
+</body>  
 </html>
