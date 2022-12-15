@@ -1,11 +1,5 @@
-
-
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $interval) {
-  $scope.i = 0;
-  $scope.test = function() {
-    $scope.i++;
-  };
 
   $scope.imgList = [
     "https://images.unsplash.com/photo-1554747706-2e474e1ae0c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -15,12 +9,9 @@ app.controller('myCtrl', function($scope, $interval) {
     "https://images.unsplash.com/photo-1669752012473-a12e9a47883d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     "https://images.unsplash.com/photo-1669545192788-f87f5e571510?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
   ];
-
-  console.log($scope.imgList[0]);
   
   $scope.imgNo = 0;
   $scope.mainImg = $scope.imgList[$scope.imgNo];
-  console.log($scope.imgList);
   $scope.uploadImg = function() {
     $scope.mainImg = $scope.imgList[$scope.imgNo];
   }
