@@ -13,30 +13,30 @@
 <body ng-app="myApp" ng-controller="myCtrl">
   <main>
     <div class="form">
-      <form action="">
-          <input type="number" ng-model="newContact.id" />
+      <form action="" >
+          <input type="hide" ng-model="newContact.id" style="display: none;"/>
 
 
-        <div class="name">
+        <div class="name inputContainer">
           <label for="name">Name</label><br>
           <input type="text" placeholder="Enter name" ng-model="newContact.name">
         </div>
 
-        <div class="email">
+        <div class="email inputContainer">
           <label for="email">Email</label><br>
           <input type="text" placeholder="Enter email" ng-model="newContact.email">
         </div>
 
-        <div class="password">
+        <div class="password inputContainer">
           <label for="password">Password</label><br>
           <input type="text" placeholder="Enter password" ng-model="newContact.password">
         </div>
 
-        <div class="phone">
+        <div class="phone inputContainer">
           <label for="phone">Phone</label><br>
           <input type="text" placeholder="Enter phone" ng-model="newContact.phone">
         </div>
-
+        <br>
         <input type="button" ng-click="saveInfo()" value="Save"/>
       </form>
     </div>
