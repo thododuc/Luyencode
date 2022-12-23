@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://kit.fontawesome.com/1fb8bb996b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="validation.css">
+  <script src="validation.js"></script>
+  <title>Input Data</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <main>
+    <div class="form">
+      <form action="">
+          <input type="number" ng-model="newContact.id" />
+
+
+        <div class="name">
+          <label for="name">Name</label><br>
+          <input type="text" placeholder="Enter name" ng-model="newContact.name">
+        </div>
+
+        <div class="email">
+          <label for="email">Email</label><br>
+          <input type="text" placeholder="Enter email" ng-model="newContact.email">
+        </div>
+
+        <div class="password">
+          <label for="password">Password</label><br>
+          <input type="text" placeholder="Enter password" ng-model="newContact.password">
+        </div>
+
+        <div class="phone">
+          <label for="phone">Phone</label><br>
+          <input type="text" placeholder="Enter phone" ng-model="newContact.phone">
+        </div>
+
+        <input type="button" ng-click="saveInfo()" value="Save"/>
+      </form>
+    </div>
+
+    <div class="display">
+      
+      <div id="searchContainer">
+        <div class="col">
+
+          <input type="text" ng-model="searchValue" placeholder="search">
+          <i class="fa-solid fa-xmark" ng-click="clearSearch()"></i>
+        </div>
+      </div>
+      <br> <br>
+      <table border="1">
+        <th>Name
+          <i ng-click="sortThis('name')" class="fa-solid fa-sort"></i>
+        </th>
+        <th>Email
+          <i ng-click="sortThis('email')" class="fa-solid fa-sort"></i>
+        </th>
+        <th>Password
+          <i ng-click="sortThis('password')" class="fa-solid fa-sort"></i>
+        </th>
+        <th>Phone
+          <i ng-click="sortThis('phone')" class="fa-solid fa-sort"></i>
+        </th>
+        <th>Action
+          <i class="fa-solid fa-sort"></i>
+        </th>
+        <tr ng-repeat="x in contacts | filter:searchValue | orderBy:sortValue:reverse">
+          <td>{{x.name}}</td>
+          <td>{{x.email}}</td>
+          <td>{{x.password}}</td>
+          <td>{{x.phone}}</td>
+          <td>
+            <a href="" ng-click="edit(x.id)">Edit</a>
+            <a href="" ng-click="delete(x.id)">Delete</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

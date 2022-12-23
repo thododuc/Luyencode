@@ -37,11 +37,10 @@ body {
   position: absolute;
   top: 50%;
   font-size: 1.4em;
-  color: white;
   cursor: pointer;
 }
 
-.control box-icon {
+box-icon {
   color: white;
 }
 
