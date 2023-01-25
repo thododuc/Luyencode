@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+
+
+    //React
+
+    const ulReact = React.createElement(
+      'ul',
+      null,
+      React.createElement('li',null,'JavaScript'),
+      React.createElement('li',null,'React'),
+    )
+    
+    const postItem = React.createElement(
+      'div',
+      {class: 'post-item'},
+      React.createElement('h2', {title: 'Hoc React tai F8'}, 'Hoc React tai F8'),
+      React.createElement('p', null, 'Hoc React tu co ban toi nang cao')
+    )
+
+    const root = document.getElementById('root');
+    ReactDOM.render(postItem, root)
+  </script>
+
+</body>
+</html>
