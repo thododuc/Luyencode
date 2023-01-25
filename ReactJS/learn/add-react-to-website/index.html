@@ -12,26 +12,26 @@
 <body>
   <div id="root"></div>
   <script>
-
-
-    //React
-
-    const ulReact = React.createElement(
+    const courseList = React.createElement(
       'ul',
       null,
-      React.createElement('li',null,'JavaScript'),
-      React.createElement('li',null,'React'),
+      React.createElement('li', null, 'JavaScript'),
+      React.createElement('li', null, 'ReactJS'),
     )
-    
-    const postItem = React.createElement(
-      'div',
-      {class: 'post-item'},
-      React.createElement('h2', {title: 'Hoc React tai F8'}, 'Hoc React tai F8'),
-      React.createElement('p', null, 'Hoc React tu co ban toi nang cao')
+    const greeting = React.createElement(
+      'h1',
+      {
+        title: 'Hello',
+        class: 'heading'
+      },
+      'Hello Guy'
     )
+    //react17
+    // const root = document.getElementById('root');
+    // ReactDOM.render(greeting, root)
 
-    const root = document.getElementById('root');
-    ReactDOM.render(postItem, root)
+    const root = ReactDOM.createRoot(container)
+    root.render(postItem)
   </script>
 
 </body>
